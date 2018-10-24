@@ -1,9 +1,8 @@
 package tk.fhan.practice.system;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author: hans.f.han
@@ -12,14 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @modified By:
  */
 @SpringBootApplication
-@RestController
+@MapperScan("tk.fhan.practice.system.mapper")
 public class SystemApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(SystemApplication.class).web(true).run(args);
-    }
-
-    @RequestMapping("/")
-    public String hello() {
-        return "hello world";
     }
 }

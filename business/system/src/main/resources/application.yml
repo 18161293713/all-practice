@@ -7,3 +7,17 @@ eureka:
 spring:
   application:
     name: system
+  cloud:
+    refresh:
+      refreshable: none  # 该参数是解决 spring boot 2.1.0之前版本的 相互引用导致应用不能正常启动问题
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root123456
+    url: jdbc:mysql://localhost:3306/practice?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&autoReconnect=true&failOverReadOnly=false&connectTimeout=10000&serverTimezone=Asia/Shanghai
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/*.xml  # 制定自定义sql语句文件地址
+  type-aliases-package: tk.fhan.practice.system.modules.user.model   # 指定表对应类包路径，来避免xml文件中写包的全路径
+  type-enums-package: tk.fhan.practice.system.enums   #指定枚举包，自动注入枚举类
+  global-config:
+    refresh: true #开启xml文件自动刷新，修改xml后不用重新启动应用。生产环境请设为false
