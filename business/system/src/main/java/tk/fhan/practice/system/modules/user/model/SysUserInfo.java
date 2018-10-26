@@ -14,5 +14,5 @@ public class SysUserInfo {
     private String id;
     private String userName;
     private String userIdCard;
-    private UserTypeEnum userTypeEnum;
+    private UserTypeEnum userType;
 }

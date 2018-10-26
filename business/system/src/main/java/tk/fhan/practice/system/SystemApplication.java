@@ -11,7 +11,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
  * @modified By:
  */
 @SpringBootApplication
-@MapperScan("tk.fhan.practice.system.mapper")
+@MapperScan("tk.fhan.practice.system.modules.user.mapper")
 public class SystemApplication {
     public static void main(String[] args) {
         new SpringApplicationBuilder(SystemApplication.class).web(true).run(args);

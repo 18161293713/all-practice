@@ -1,11 +1,8 @@
-package tk.fhan.practice.system;
+package tk.fhan.practice;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import tk.fhan.practice.system.modules.user.mapper.SystemUserInfoMapper;
 import tk.fhan.practice.system.modules.user.model.SysUserInfo;
 
@@ -17,9 +14,7 @@ import java.util.List;
  * @date: Created in 11:21 2018/10/24
  * @modified By:
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class SystemBaseTest {
+public class MybatisPlusTest extends BaseTest {
     @Autowired
     private SystemUserInfoMapper systemUserInfoMapper;
 
@@ -29,8 +24,13 @@ public class SystemBaseTest {
         sysUserInfo.setId("ashdy123kznc0123gxja21");
         sysUserInfo.setUserName("mybatis-plus");
         sysUserInfo.setUserIdCard("123456789123456789");
-        int insert = systemUserInfoMapper.insert(sysUserInfo);
-        System.out.println(insert);
+        SysUserInfo userInfo = systemUserInfoMapper.selectById(sysUserInfo.getId());
+        System.out.println("================================================");
+        System.out.println(userInfo.getUserName());
+        System.out.println(userInfo.getUserType());
+        System.out.println(userInfo.getUserType().getValue());
+        System.out.println(userInfo.getUserType().getDesc());
+        System.out.println("================================================");
     }
 
     /**
