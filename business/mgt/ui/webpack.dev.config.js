@@ -12,7 +12,7 @@ fs.open('./src/config/env.js', 'w', function (err, fd) {
 });
 
 module.exports = merge(webpackBaseConfig, {
-	devtool: '#source-map',
+	devtool: '#source-map',  // source-map 开发环境使用
 	output: {
 		publicPath: '/dist/',
 		filename: '[name].js',
