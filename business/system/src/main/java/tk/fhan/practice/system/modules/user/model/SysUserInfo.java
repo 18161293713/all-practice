@@ -1,7 +1,10 @@
 package tk.fhan.practice.system.modules.user.model;
 
 import lombok.Data;
-import tk.fhan.practice.system.modules.user.enums.UserTypeEnum;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * @author: hans.f.han
@@ -10,9 +13,11 @@ import tk.fhan.practice.system.modules.user.enums.UserTypeEnum;
  * @modified By:
  */
 @Data
+@Entity
 public class SysUserInfo {
+    @Id
+    @GeneratedValue
     private String id;
     private String userName;
     private String userIdCard;
-    private UserTypeEnum userType;
 }
