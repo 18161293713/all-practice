@@ -14,5 +14,6 @@
     <modules>
         <module>register-center</module>
         <module>config-center</module>
+        <module>gateway</module>
     </modules>
 </project>
