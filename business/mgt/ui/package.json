@@ -20,6 +20,9 @@
     "vue-router": "^2.8.1"
   },
   "devDependencies": {
+    "cryptiles": ">=4.1.2",
+    "uglify-js": ">=2.6.0",
+    "hoek": ">=4.2.1",
     "autoprefixer-loader": "^2.0.0",
     "babel": "^6.23.0",
     "babel-core": "^6.23.1",
