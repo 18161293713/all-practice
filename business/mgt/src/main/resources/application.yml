@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 8002
 eureka:
   client:
     serviceUrl:
@@ -7,3 +7,9 @@ eureka:
 spring:
   application:
     name: mgt
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

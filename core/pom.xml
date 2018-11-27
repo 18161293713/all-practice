@@ -15,5 +15,6 @@
         <module>register-center</module>
         <module>config-center</module>
         <module>gateway</module>
+        <module>actuator-admin</module>
     </modules>
 </project>
